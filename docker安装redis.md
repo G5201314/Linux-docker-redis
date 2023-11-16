@@ -16,11 +16,11 @@ docker pull redis:6.0.8
 
 #### 二、创建文件目录
 
-1.创建目录
+1.创建目录(-p递归创建多个文件夹)
 
 ```java
-mkdir /home/redis/conf
-mkdir /home/redis/data
+mkdir -p /home/redis/conf
+mkdir -p /home/redis/data
 ```
 
 2.修改配置文件
@@ -56,7 +56,7 @@ docker run --restart=always \
 2.进入容器
 
 ```java
-docker exec -it myredis bash
+docker exec -it redis bash
 ```
 
 3.启动redis（解决中文乱码）
